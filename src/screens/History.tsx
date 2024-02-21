@@ -4,6 +4,7 @@ import {useGlobalSelector} from '../contexts/GlobalContext';
 import {TaskView} from '../components/TaskView';
 import {COLORS} from '../utils/constants';
 import {ListShellContainer} from '../components/ListShellContainer';
+import {EmptyList} from '../components/EmptyList';
 
 export const History = () => {
   const completedTasks = useGlobalSelector(
@@ -17,6 +18,7 @@ export const History = () => {
         keyExtractor={item => item.id}
         renderItem={({item}) => <TaskView task={item} />}
         style={{backgroundColor: COLORS.white}}
+        ListEmptyComponent={<EmptyList />}
       />
     </ListShellContainer>
   );
