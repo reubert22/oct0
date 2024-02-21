@@ -1,11 +1,11 @@
 import React from 'react';
-import {Task} from '../models/Task';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {useGlobalActorRef} from '../contexts/GlobalContext';
-import {ACTION_TYPES, COLORS} from '../utils/constants';
-
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
+import {Task} from '../models/Task';
+import {useGlobalActorRef} from '../contexts/GlobalContext';
+import {ACTION_TYPES, COLORS} from '../utils/constants';
 
 export const TaskView = ({task}: {task: Task}) => {
   const {send} = useGlobalActorRef();

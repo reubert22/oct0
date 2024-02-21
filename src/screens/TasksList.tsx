@@ -1,5 +1,6 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList} from 'react-native';
+
 import {useGlobalSelector} from '../contexts/GlobalContext';
 import {TaskView} from '../components/TaskView';
 import {COLORS} from '../utils/constants';

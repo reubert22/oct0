@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+
 import {COLORS} from '../../utils/constants';
 
 export const ListShellContainer = ({
@@ -8,16 +9,14 @@ export const ListShellContainer = ({
 }: {
   title: string;
   children: ReactNode;
-}) => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerTitle}>{title}</Text>
-      </View>
-      {children}
+}) => (
+  <View style={styles.container}>
+    <View style={styles.headerContainer}>
+      <Text style={styles.headerTitle}>{title}</Text>
     </View>
-  );
-};
+    {children}
+  </View>
+);
 
 const styles = StyleSheet.create({
   container: {

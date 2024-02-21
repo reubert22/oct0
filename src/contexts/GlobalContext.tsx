@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import {createActorContext} from '@xstate/react';
-import {globalController} from '../controllers/globalController';
-import {PropsWithChildren} from 'react';
 import {useNavigation} from '@react-navigation/native';
+
+import {globalController} from '../controllers/globalController';
 import {mockData} from '../models/Task';
 
 const GlobalStateContext = createActorContext(globalController);

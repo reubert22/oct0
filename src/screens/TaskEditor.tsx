@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {View, TextInput, StyleSheet, Text, Pressable} from 'react-native';
+import {Controller, useForm} from 'react-hook-form';
+import * as yup from 'yup';
+import {yupResolver} from '@hookform/resolvers/yup';
+
 import {useGlobalActorRef, useGlobalSelector} from '../contexts/GlobalContext';
 import {ACTION_TYPES, COLORS} from '../utils/constants';
-import {yupResolver} from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import {Controller, useForm} from 'react-hook-form';
 
 const AddNewTaskValidation = yup.object({
   title: yup

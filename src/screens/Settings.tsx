@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
+
 import {useGlobalSelector} from '../contexts/GlobalContext';
 import {COLORS} from '../utils/constants';
 import {ListShellContainer} from '../components/ListShellContainer';

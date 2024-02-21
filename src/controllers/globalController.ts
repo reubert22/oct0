@@ -1,5 +1,7 @@
 import {InterpreterFrom, MachineOptions, assign, createMachine} from 'xstate';
+import Toast from 'react-native-toast-message';
 import {NavigationProp} from '@react-navigation/native';
+
 import {Task} from '../models/Task';
 import {RootStackParamList} from '../navigation/Navigation';
 
@@ -28,6 +30,13 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
     if (e.type !== 'DELETE') {
       return {};
     }
+
+    Toast.show({
+      type: 'success',
+      text1: 'Success',
+      text2: 'Task deleted ✅',
+    });
+
     if (e.data.completed) {
       return {
         completedTasks: ctx.completedTasks.filter(
@@ -67,6 +76,12 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
     }
 
     if (e.data.completed) {
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: 'Task was moved to pending',
+      });
+
       return {
         completedTasks: ctx.completedTasks.filter(
           task => task.id !== e.data.id,
@@ -77,6 +92,12 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
     }
 
     if (!e.data.completed) {
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: 'Task moved to complete ✅',
+      });
+
       return {
         pendingTasks: ctx.pendingTasks.filter(
           task => task.id !== e.data.id,
@@ -106,6 +127,12 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
 
       ctx.navigationController.canGoBack() && ctx.navigationController.goBack();
 
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: 'New task created ✅',
+      });
+
       return {
         pendingTasks: updatedTasks as [Task],
         currentTask: undefined,
@@ -127,6 +154,12 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
 
       ctx.navigationController.canGoBack() && ctx.navigationController.goBack();
 
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: 'Task edited ✅',
+      });
+
       return {
         completedTasks: newCompletedList as [Task],
         currentTask: undefined,
@@ -147,6 +180,12 @@ const actions: MachineOptions<GlobalContext, GlobalEvents>['actions'] = {
       });
 
       ctx.navigationController.canGoBack() && ctx.navigationController.goBack();
+
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: 'Task edited ✅',
+      });
 
       return {
         pendingTasks: newPendingList as [Task],

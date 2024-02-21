@@ -1428,7 +1428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.20.0":
+"@babel/preset-env@npm:^7.23.9":
   version: 7.23.9
   resolution: "@babel/preset-env@npm:7.23.9"
   dependencies:
@@ -2142,6 +2142,17 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 6ad6a00fc4f2f2cfc6bff76fb1d88b8ee20bc0601e18ebb01b6d4be583733a860239a521a7fbca73b612e66705078809483549d2b18f370eb346c5155c8e4a0f
+  languageName: node
+  linkType: hard
+
+"@react-native-async-storage/async-storage@npm:^1.22.1":
+  version: 1.22.1
+  resolution: "@react-native-async-storage/async-storage@npm:1.22.1"
+  dependencies:
+    merge-options: ^3.0.4
+  peerDependencies:
+    react-native: ^0.0.0-0 || >=0.60 <1.0
+  checksum: 7f2dca1a9510cefba0639e041612ede39fbac4f684b3d55abce19ce63e497bfa8b1cc090d55f56656f4822024b7ac71ca608536fcec3decbb5e6d2ea21d21e21
   languageName: node
   linkType: hard
 
@@ -3297,7 +3308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:^29.2.1, babel-jest@npm:^29.7.0":
+"babel-jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "babel-jest@npm:29.7.0"
   dependencies:
@@ -5775,6 +5786,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
+  languageName: node
+  linkType: hard
+
 "is-plain-object@npm:^2.0.4":
   version: 2.0.4
   resolution: "is-plain-object@npm:2.0.4"
@@ -6892,6 +6910,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"merge-options@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "merge-options@npm:3.0.4"
+  dependencies:
+    is-plain-obj: ^2.1.0
+  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
+  languageName: node
+  linkType: hard
+
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -7997,10 +8024,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oct0@workspace:."
   dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.20.0
+    "@babel/core": ^7.23.9
+    "@babel/preset-env": ^7.23.9
     "@babel/runtime": ^7.20.0
     "@hookform/resolvers": ^3.3.4
+    "@react-native-async-storage/async-storage": ^1.22.1
     "@react-native/eslint-config": ^0.72.2
     "@react-native/metro-config": ^0.72.11
     "@react-navigation/bottom-tabs": ^6.5.8
@@ -8012,7 +8040,7 @@ __metadata:
     "@types/react-native-vector-icons": ^6.4.18
     "@types/react-test-renderer": ^18.0.0
     "@xstate/react": ^3.2.2
-    babel-jest: ^29.2.1
+    babel-jest: ^29.7.0
     eslint: ^8.19.0
     jest: ^29.2.1
     metro-react-native-babel-preset: 0.76.8
@@ -8023,6 +8051,7 @@ __metadata:
     react-native-asset: ^2.1.1
     react-native-safe-area-context: ^4.7.2
     react-native-screens: ^3.25.0
+    react-native-toast-message: ^2.2.0
     react-native-vector-icons: ^10.0.3
     react-test-renderer: 18.2.0
     ts-jest: ^29.1.2
@@ -8575,6 +8604,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: c1879eea8386f32c2655fedd79d41d8e25d2f4e7f883abbcad2c747ea7ac859f4a7f469475a519948e7c5ea317a7ebd8df92c6365627f6a5da1e4a208cece7e1
+  languageName: node
+  linkType: hard
+
+"react-native-toast-message@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "react-native-toast-message@npm:2.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: b286b8d5ca0f21737c2e0a8e9c2d6dab2c06a3895335aa541c69eeb42d526cc6f3951069e59d8d346d3e6cafb8feaa450c35b0efe7c3d51ff81351d1477e71eb
   languageName: node
   linkType: hard
 
